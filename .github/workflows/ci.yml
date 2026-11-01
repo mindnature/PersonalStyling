@@ -1,0 +1,29 @@
+name: Test and smoke-check
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  node:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+      - name: Unit and API tests
+        run: npm test
+      - name: Start and verify HTTP pages
+        run: |
+          node server.mjs > /tmp/personalstyling.log 2>&1 &
+          server_pid=$!
+          trap 'kill "$server_pid" || true' EXIT
+          for i in $(seq 1 30); do
+            if curl --silent --fail http://127.0.0.1:3000/api/status > /tmp/styling-status.json; then break; fi
+            sleep 1
+          done
+          grep -q '"aiEnabled":false' /tmp/styling-status.json
+          curl --silent --fail http://127.0.0.1:3000/ | grep -q '私人衣品工作台'
+          curl --silent --fail http://127.0.0.1:3000/app.js | grep -q 'buildLocalPlan'
