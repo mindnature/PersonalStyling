@@ -1,0 +1,152 @@
+{
+  "version": "1.0",
+  "curated_date": "2026-11-01",
+  "notice": "这是经人工核对的官方案例入口和少量单品组合种子库，不是采集的海量真人穿搭库；部分是主题/图库入口，不能当作精确完整穿搭。使用前尽量检查原始页面，用户已否定风格时不要强行推这些案例。",
+  "looks": [
+    {
+      "id": "CN-PB-BARN-001",
+      "title": "短款复古工装外套＋自然宽直裤",
+      "source_name": "PEACEBIRD MEN 官方产品实拍",
+      "source_type": "official_product_photo",
+      "source_url": "https://shop.peacebird.com/products/men-barn-inspired-cropped-boxy-jacket-babcf3269",
+      "verified_on": "2026-11-01",
+      "region": "中国品牌（站点为其国际商城，非国内现货证明）",
+      "observed_pieces": [
+        "深棕/炭灰短款翻领工装外套",
+        "橄榄色有领内搭",
+        "浅卡其宽直裤",
+        "深色鞋履（具体鞋款不确定）"
+      ],
+      "keywords": [
+        "短外套",
+        "复古工装",
+        "都市休闲",
+        "稍宽裤型"
+      ],
+      "best_for": [
+        "轻商务休闲",
+        "日常通勤"
+      ],
+      "evidence_quality": "one_real_official_outfit_photo",
+      "do_not_assume": [
+        "用户穿相同廓形一定合适",
+        "国际官网价格等于人民币国内售价",
+        "鞋履的具体品牌型号"
+      ]
+    },
+    {
+      "id": "CN-UNIQLO-C-HARRINGTON-002",
+      "title": "哈灵顿茄克与廓形裤的搭配方向",
+      "source_name": "UNIQLO:C 2026 秋冬中国官方男装造型",
+      "source_type": "official_lookbook_item_list",
+      "source_url": "https://www.uniqlo.cn/CPJ_26FW_BOOK_M.html?index=3",
+      "verified_on": "2026-11-01",
+      "region": "中国大陆官方商城",
+      "observed_pieces": [
+        "羊毛混纺哈灵顿茄克（商品编号489482）",
+        "廓形长裤（商品编号484875）",
+        "该页面其他造型还展示牛仔风格茄克（488726）"
+      ],
+      "keywords": [
+        "哈灵顿",
+        "轻松利落",
+        "廓形长裤",
+        "轻熟"
+      ],
+      "best_for": [
+        "通勤",
+        "日常聚会"
+      ],
+      "evidence_quality": "official_lookbook_with_listed_items",
+      "do_not_assume": [
+        "同页面所列所有单品在同一模特身上",
+        "用户适合原版宽度",
+        "当前价格与库存未复核"
+      ]
+    },
+    {
+      "id": "CN-UNIQLO-C-KNIT-003",
+      "title": "针织衬衫式开衫与牛仔风格廓形裤",
+      "source_name": "UNIQLO:C 2026 秋冬中国官方男装造型",
+      "source_type": "official_lookbook_item_list",
+      "source_url": "https://www.uniqlo.cn/CPJ_26FW_BOOK_M.html?index=3",
+      "verified_on": "2026-11-01",
+      "region": "中国大陆官方商城",
+      "observed_pieces": [
+        "羊毛混纺衬衫式针织开衫（商品编号487488）",
+        "廓形长裤/牛仔风（商品编号488743）"
+      ],
+      "keywords": [
+        "针织外套",
+        "休闲廓形",
+        "低饱和",
+        "柔和"
+      ],
+      "best_for": [
+        "日常",
+        "休闲办公室"
+      ],
+      "evidence_quality": "official_lookbook_with_listed_items",
+      "do_not_assume": [
+        "此页面单品列表是经用户确认喜欢的造型",
+        "不同时节均适用",
+        "商品页面存在就代表实体有货"
+      ]
+    },
+    {
+      "id": "CN-UNIQLO-U-LOOKBOOK-004",
+      "title": "现代简约廓形（需在官网具体选择造型）",
+      "source_name": "Uniqlo U 2026 秋冬中国官方 Lookbook",
+      "source_type": "official_gallery_entry",
+      "source_url": "https://www.uniqlo.cn/UPJ_26FW_LOOK.html",
+      "verified_on": "2026-11-01",
+      "region": "中国大陆官方商城",
+      "observed_pieces": [
+        "该链接是男装/女装造型图库入口，不代表某个固定组合"
+      ],
+      "keywords": [
+        "现代简约",
+        "宽松剪裁",
+        "中性配色"
+      ],
+      "best_for": [
+        "风格探索"
+      ],
+      "evidence_quality": "verified_gallery_entry_not_individual_outfit",
+      "do_not_assume": [
+        "没有打开特定造型图就能列出全套穿着",
+        "用户喜欢其中任一套",
+        "所有模特形象适合中国实际场景"
+      ]
+    },
+    {
+      "id": "CN-LIFEWEAR-TRENDS-005",
+      "title": "2026秋冬随性精致/城市漫游趋势集合",
+      "source_name": "UNIQLO CN 2026-10-08 LifeWear 官方穿搭专题",
+      "source_type": "official_editorial_guide",
+      "source_url": "https://www.uniqlo.com/cn/news/topics/2026100801/",
+      "verified_on": "2026-11-01",
+      "region": "中国大陆官方内容",
+      "observed_pieces": [
+        "随性精致：衬衫或卫衣搭配哈灵顿茄克/休闲西装",
+        "城市漫游：轻量休闲短茄克/机能外套",
+        "巧克力棕与黑色同色系"
+      ],
+      "keywords": [
+        "随性精致",
+        "城市漫游",
+        "暖棕",
+        "松弛"
+      ],
+      "best_for": [
+        "风格主题参考"
+      ],
+      "evidence_quality": "brand_editorial_theme_not_single_ootd",
+      "do_not_assume": [
+        "文字提及的服装等于某张真实照片完整穿着",
+        "符合用户的具体喜好",
+        "每项都是在售现货"
+      ]
+    }
+  ]
+}
