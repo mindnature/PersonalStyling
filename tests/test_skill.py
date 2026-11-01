@@ -67,7 +67,7 @@ class SkillPackageTests(unittest.TestCase):
                 self.assertTrue(look.get(required), f"{look.get('id')}: {required}")
             self.assertTrue(look["source_url"].startswith("https://"), look["id"])
             self.assertTrue(any(host in look["source_url"] for host in ["uniqlo.cn", "peacebird.com"]))
-            self.assertRegex(look["verified_on"], r"^20\\d{2}-\\d{2}-\\d{2}$")
+            self.assertRegex(look["verified_on"], r"^20\d{2}-\d{2}-\d{2}$")
         kinds = {look["source_type"] for look in looks}
         self.assertIn("official_product_photo", kinds)
         self.assertIn("official_gallery_entry", kinds)
