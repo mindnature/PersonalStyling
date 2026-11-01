@@ -14,6 +14,8 @@
 
 浏览器打开 http://127.0.0.1:3000。Windows PowerShell、macOS、Linux 均可。
 
+**不想输入 npm 命令？** Windows 可以双击 start.bat；macOS/Linux 可以在终端执行 bash start.sh。首次使用仍需安装 Node.js 20+。
+
 ## 可选：启用 AI 看图
 
 复制 .env.example 为 .env：
