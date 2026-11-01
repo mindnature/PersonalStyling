@@ -1,74 +1,91 @@
-# PersonalStyling · 衣品选衣工作台
+# PersonalStyling · 衣品选衣 Skill
 
-**中国大陆主流男性审美 × 少量日韩简约风** 的本地优先私人形象与穿搭工作台。可上传正面人脸照和全身照，选风格/场景/季节/预算，生成三套完整上衣、裤子、鞋子、配饰、发型方案。
+**给 Codex、WorkBuddy 等 AI Agent 安装后直接使用的中国本土审美私人形象顾问。**
 
-> 注意：未配置 API Key 时运行的是**基于表单的离线规则推荐**，不会分析照片。配置自己的 OpenAI API Key 并主动点击「AI 看图分析」后，可发送图片进行视觉辅助分析。当前版本**不是**真实虚拟试穿、电商实时检索或精准身材测量工具。
+不需要自己部署模型、安装 Node.js、启动网页、填 API Key，也不需要独立服务。把技能安装到你日常使用的 AI Agent 后，直接在对话里上传全身照/正脸照，描述想要的气质、场景和预算即可。
 
-## 30 秒启动
+默认审美：**中国大陆主流男性审美为主，适度融合日韩简约风**。核心价值不是照搬穿搭博主，而是给本人制定上衣、裤子、鞋子、配饰、发型的完整方案。
 
-需要 Node.js **20+**，不依赖第三方 npm 包。
+> **能力说明**：Skill 是一套可复用工作流程，不是独立 AI 模型。照片分析取决于你使用的 Codex/WorkBuddy 版本是否支持读取图片。个人试穿效果图只有宿主提供生图/修图能力时才能生成。实时商品推荐需要宿主能搜索商家信息；否则输出款式与选购关键词。无需**额外** API Key，不代表 AI 平台没有账号、订阅或配额限制。
 
-    git clone https://github.com/mindnature/PersonalStyling.git
-    cd PersonalStyling
-    npm start
+## 安装方式
 
-浏览器打开 http://127.0.0.1:3000。Windows PowerShell、macOS、Linux 均可。
+### A. Codex（推荐：从 GitHub 安装）
 
-**不想输入 npm 命令？** Windows 可以双击 start.bat；macOS/Linux 可以在终端执行 bash start.sh。首次使用仍需安装 Node.js 20+。
+在 Codex 对话里调用内置的 \`$skill-installer\`，告诉它：
 
-## 可选：启用 AI 看图
+\`\`\`text
+$skill-installer 请安装这个技能：
+https://github.com/mindnature/PersonalStyling/tree/main/.agents/skills/personal-styling
+\`\`\`
 
-复制 .env.example 为 .env：
+或者将仓库克隆到本地，在该仓库目录启动 Codex；Codex 会从 \`.agents/skills/personal-styling/\` 发现仓库技能。若安装后没有显示，请重新启动 Codex。
 
-- Windows PowerShell：Copy-Item .env.example .env
-- macOS/Linux：cp .env.example .env
+明确调用：\`$personal-styling\`，然后附上照片与穿搭需求。
 
-编辑 .env，在 OPENAI_API_KEY= 后填写你自己的密钥（**不要**发给别人或提交仓库）。重启 npm start。前端会显示 AI 已启用。
+### B. WorkBuddy（上传 ZIP）
 
-- 调用 OpenAI Responses API；模型默认 gpt-4.1-mini，可在 .env 修改 OPENAI_MODEL。
-- 只有主动点击「AI 看图分析」后，上传的照片才会被发送给外部 API。
-- 图片在浏览器压缩，服务端只转发并返回分析结果，不存盘；API 调用可能产生费用。
-- 请求配置 store:false；提供商仍可能依照自身政策处理或保留数据，请自行评估。
-- 未提供密钥时，全部功能仍可本地运行（不包括真实看图分析）。
+1. 从本项目的技能目录 [\`.agents/skills/personal-styling\`](.agents/skills/personal-styling) 获取完整技能文件夹；也可以直接使用维护者提供的同版本 **personal-styling.zip** 安装包。
+2. 在 WorkBuddy 打开 **专家·技能·连接器 → 技能 → 添加技能 → 上传技能**，选择包含完整 \`personal-styling/SKILL.md\` 与 \`references/\` 的 ZIP。
+3. 安装完成后，在对话里说“使用衣品选衣技能，给我搭配三套适合开会的衣服”，并上传照片。
 
-## 已实现
+不依赖 WorkBuddy 市场上架；这是**自己上传**的技能包，不要误认它已经在官方技能市场上线。具体界面名称以 WorkBuddy 客户端实际版本为准。
 
-- 中文响应式工作台，双照片上传与本地预览
-- 个人资料：身高体重、尺码、目标气质、成熟/少年感、季节、场景、预算、已有衣服、发型诉求
-- 离线规则引擎输出 A日常、B提升、C年轻 三套搭配
-- 可选的 OpenAI 图像理解分析，结构化输出三套建议
-- 方案下载为 Markdown / JSON；清除本地偏好数据
-- 本机默认监听 127.0.0.1，不保存原始照片，不在浏览器存储照片
-- 中文提示、错误处理、自动化测试
+对于想自行打包的开发者：执行 \`python scripts/package_skill.py\`，会在 \`dist/personal-styling.zip\` 生成标准目录结构的安装包。打包 Python 仅用于发布，不是普通用户使用 Skill 的前置条件。
 
-## 暂未实现
+### C. 其他兼容 Agent Skills 的宿主
 
-- AI 换装图 / 精准同脸虚拟试穿
-- 真人身高、围度自动测量
-- 电商实时库存/价格/购买链接核验
-- 用户账号、云端衣橱、移动 App
+将完整的 \`.agents/skills/personal-styling\` 文件夹放到宿主支持的个人或项目 Skills 目录。不得只复制单独的 SKILL.md 并丢掉 \`references/\`；完整包能保留分析规范和使用示例。
 
-## Codex / WorkBuddy 快速接管
+## 安装后怎么说
 
-将仓库克隆到本地，然后让 Agent 阅读 **AGENTS.md**、**README.md**、**docs/STYLE_STANDARD.md**。通用首条指令见 [docs/WORKBUDDY.md](docs/WORKBUDDY.md)。
+\`\`\`text
+使用 PersonalStyling 帮我做私人形象分析。
+我上传了全身照和正脸照。
+希望 70% 成熟稳重 + 30% 清爽少年感。
+场景：讲课 / 科研会议；季节：秋冬；整套预算：1000 元。
+请先分析照片里实际可见的体型比例、发型和穿着效果，
+再给我三套上衣、裤子、鞋子、配饰和发型的完整搭配，
+说明版型、配色、原因、购买优先级和理发店沟通话术。
+\`\`\`
 
-    npm test
-    npm run dev
+你也可以不提供照片，只问“这两件衣服怎么搭”“什么发型适合我”“用我已有的衣服组成三套造型”。
 
-## 架构
+## 这是什么 / 不是什么
 
-- public/index.html：网页结构
-- public/style.css：视觉样式
-- public/app.js：交互、上传、结果展示、下载
-- src/engine.mjs：规则化方案与 AI 返回结果校验
-- server.mjs：Node 原生静态服务与私钥代理
-- tests/engine.test.mjs：Node 原生单元测试
-- docs/STYLE_STANDARD.md：风格原则与伦理/隐私边界
+| 已经提供 | 取决于宿主或尚未提供 |
+|---|---|
+| 中国本土审美完整指导规则 | 主动读取/理解照片（需宿主视觉能力） |
+| 个人风格 × 场景 × 预算工作流 | 本人虚拟试穿图片（需宿主生图/修图） |
+| 三套可执行全身搭配及发型话术 | 京东/淘宝实时商品和价格（需搜索能力） |
+| 衣橱优先复用、隐私与可靠性原则 | 独立 App、精确量体、自动下单 |
 
-## 隐私提醒
+## 项目结构
 
-仓库不含任何示例真人照片。上传的人像仅在浏览器当前会话用于预览；选择 AI 模式时才会从本机发送到你配置的服务商。请勿把真实照片放进公开仓库、代码提交或 bug 报告。
+\`\`\`text
+PersonalStyling/
+├── .agents/skills/personal-styling/
+│   ├── SKILL.md                 # 必需：技能入口
+│   └── references/
+│       ├── aesthetic-standard.md
+│       ├── photo-analysis.md
+│       ├── outfit-playbook.md
+│       ├── capability-and-privacy.md
+│       └── examples.md
+├── scripts/package_skill.py     # 可选：发布者生成 WorkBuddy ZIP
+├── tests/test_skill.py          # 静态检查
+├── AGENTS.md                    # 开发本仓库的规则
+└── README.md
+\`\`\`
 
-## 开源许可
+## 维护与验证
 
-MIT。欢迎提交 Issue 与 Pull Request。
+仅维护者需要 Python 3（标准库），运行 \`python -m unittest discover -s tests -v\`。GitHub Actions 会验证技能目录、元信息和 ZIP 结构。普通安装者完全不需要运行此命令。
+
+原先可选 API 的网页工作台保留在历史分支 [legacy-webapp](https://github.com/mindnature/PersonalStyling/tree/legacy-webapp)，**不属于本 Skill**。main 分支是无独立 API 的纯技能版本。
+
+## 安全
+
+个人照片不属于代码仓库。不要将真人照片、联系方式、敏感档案上传到公开 GitHub。Skill 不能替宿主承诺“照片永不上传/永不保存”；使用平台会按自己的服务规则处理输入。
+
+MIT License · mindnature
