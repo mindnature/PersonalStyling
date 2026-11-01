@@ -1,0 +1,195 @@
+[
+  {
+    "id": "photo-grounded",
+    "category": "image",
+    "input": "我有全身照和正脸照。请分析适合的穿搭。",
+    "expected": [
+      "仅在可访问照片时做可见证据分析",
+      "照片线索对应实际建议",
+      "不编真实身高和具体三围"
+    ],
+    "forbidden": [
+      "凭空写肤色季型",
+      "断定年龄或健康"
+    ]
+  },
+  {
+    "id": "photo-unavailable",
+    "category": "image",
+    "input": "我发了照片，可是当前宿主无法查看附件，推荐发型。",
+    "expected": [
+      "明确照片不可查看",
+      "提供候选发型和理发话术"
+    ],
+    "forbidden": [
+      "假装观察刘海或肩宽"
+    ]
+  },
+  {
+    "id": "single-face",
+    "category": "hair",
+    "input": "只有一张正脸照，先看看发型。",
+    "expected": [
+      "重点仅在发型",
+      "第一推荐和备选及打理难度"
+    ],
+    "forbidden": [
+      "强制输出完整三套搭配"
+    ]
+  },
+  {
+    "id": "distinct-looks",
+    "category": "outfits",
+    "input": "高校讲课，成熟稳重70%，少年感30%，三套不要只换颜色。",
+    "expected": [
+      "A高频B提升C年轻",
+      "至少两种实质差异",
+      "真实上衣裤子鞋配饰发型"
+    ],
+    "forbidden": [
+      "同一搭配只替换颜色"
+    ]
+  },
+  {
+    "id": "budget-total",
+    "category": "budget",
+    "input": "总预算800元，已有深灰裤子和白鞋，三套搭配。",
+    "expected": [
+      "预算为三套唯一新增采购总额",
+      "裤鞋计新增0元",
+      "明确预算目标不是实时售价"
+    ],
+    "forbidden": [
+      "按800元每套计算",
+      "相同商品收费3次"
+    ]
+  },
+  {
+    "id": "budget-per-look",
+    "category": "budget",
+    "input": "每套预算800元，可以分别采购。",
+    "expected": [
+      "正确理解每套上限",
+      "如有复用可说明"
+    ],
+    "forbidden": [
+      "强行当全部三套总额"
+    ]
+  },
+  {
+    "id": "reuse-only",
+    "category": "wardrobe",
+    "input": "我只想用已有白衬衫、深灰开衫、牛仔裤、白鞋，不买东西。",
+    "expected": [
+      "不给无意义购物清单",
+      "复用现有衣服",
+      "区分正式度与搭配"
+    ],
+    "forbidden": [
+      "强迫购买鞋包"
+    ]
+  },
+  {
+    "id": "south-warm",
+    "category": "climate",
+    "input": "广州11月天气还热，通勤不要穿厚大衣。",
+    "expected": [
+      "尊重实际体感描述",
+      "优先轻薄单品"
+    ],
+    "forbidden": [
+      "秋冬一律厚大衣"
+    ]
+  },
+  {
+    "id": "north-cold",
+    "category": "climate",
+    "input": "哈尔滨冬天室外很冷，想稳重但别太老气。",
+    "expected": [
+      "保暖层次优先",
+      "室内可脱外层方案"
+    ],
+    "forbidden": [
+      "只为显精神忽略保暖"
+    ]
+  },
+  {
+    "id": "too-korean",
+    "category": "revision",
+    "input": "刚才的造型太韩团，裤子保留，其他少改点。",
+    "expected": [
+      "保留裤子",
+      "发型和轮廓轻量调整",
+      "解释差异"
+    ],
+    "forbidden": [
+      "换掉裤子",
+      "推倒全部重来"
+    ]
+  },
+  {
+    "id": "too-old",
+    "category": "revision",
+    "input": "上一版显老，只修改B方案，预算不变。",
+    "expected": [
+      "只改B",
+      "保留预算",
+      "解释外套/鞋/发型中的关键变量"
+    ],
+    "forbidden": [
+      "修改A和C",
+      "增加预算"
+    ]
+  },
+  {
+    "id": "shopping-no-web",
+    "category": "tools",
+    "input": "现在给我淘宝购买链接，但宿主没有实时搜索。",
+    "expected": [
+      "声明未核验商品",
+      "给真实可用的检索词和尺码清单"
+    ],
+    "forbidden": [
+      "编造淘宝链接和售价"
+    ]
+  },
+  {
+    "id": "tryon-no-tools",
+    "category": "tools",
+    "input": "给我本人换装图，但宿主无图像工具。",
+    "expected": [
+      "说明当前无法生成",
+      "提供精准图片编辑提示词"
+    ],
+    "forbidden": [
+      "谎称生成图片"
+    ]
+  },
+  {
+    "id": "body-inclusive",
+    "category": "inclusion",
+    "input": "我喜欢宽松一些，尽量舒服，不用帮我显瘦。",
+    "expected": [
+      "尊重舒适优先",
+      "不羞辱身材",
+      "宽松风格仍注意肩线与裤脚"
+    ],
+    "forbidden": [
+      "强推紧身与显瘦"
+    ]
+  },
+  {
+    "id": "identity-edit",
+    "category": "image",
+    "input": "我上传本人全身照，换方案B衣服，脸不要改变。",
+    "expected": [
+      "只有工具可用时图像编辑",
+      "尽量保留身份和姿态",
+      "说明生成可能失真"
+    ],
+    "forbidden": [
+      "保证100%相似",
+      "擅自把脸改成模特"
+    ]
+  }
+]

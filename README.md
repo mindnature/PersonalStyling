@@ -1,91 +1,90 @@
-# PersonalStyling · 衣品选衣 Skill
+# PersonalStyling · 衣品选衣 Skill V2.1
 
-**给 Codex、WorkBuddy 等 AI Agent 安装后直接使用的中国本土审美私人形象顾问。**
+**中国大陆主流男性审美 × 少量日韩简约风**。一个安装后直接对话使用的私人形象顾问技能，适配 Codex、WorkBuddy 以及支持 Agent Skills 的 AI Agent。
 
-不需要自己部署模型、安装 Node.js、启动网页、填 API Key，也不需要独立服务。把技能安装到你日常使用的 AI Agent 后，直接在对话里上传全身照/正脸照，描述想要的气质、场景和预算即可。
+不需要自己部署模型、安装 Node.js、启动网页或填写**额外** API Key。直接上传照片、描述场景和预算，让宿主 AI 给出可落实的上衣、裤子、鞋履、配饰和发型建议。
 
-默认审美：**中国大陆主流男性审美为主，适度融合日韩简约风**。核心价值不是照搬穿搭博主，而是给本人制定上衣、裤子、鞋子、配饰、发型的完整方案。
+> 它不是一个独立视觉模型：是否能直接分析图片、生成本人试穿图、搜索电商，取决于宿主工具与权限。宿主原有的账号、用量及订阅约束仍然存在。技能会在能力不足时明确告知，不会装作已经看图、下单或生成效果图。
 
-> **能力说明**：Skill 是一套可复用工作流程，不是独立 AI 模型。照片分析取决于你使用的 Codex/WorkBuddy 版本是否支持读取图片。个人试穿效果图只有宿主提供生图/修图能力时才能生成。实时商品推荐需要宿主能搜索商家信息；否则输出款式与选购关键词。无需**额外** API Key，不代表 AI 平台没有账号、订阅或配额限制。
+## V2.1 重点改进
 
-## 安装方式
+1. **照片证据驱动**：通过「可见线索 → 影响 → 可试穿的修改」给出肩线、衣长、裤脚、鞋型、刘海等具体建议；不猜三围和真实尺码。
+2. **三套有差异**：A 日常高频、B 形象升级、C 清爽年轻；至少在两处造型结构、正式度或鞋裤形态上不同，不只是换颜色。
+3. **完整发型决策**：顶部、侧面、刘海、打理难度、备选发型和理发店沟通话术。
+4. **预算与衣橱去重**：默认将预算视为本次全部新增采购的总额，旧衣优先，三套共享的裤鞋不会收费三次。
+5. **反馈精准修订**：用户说显老、太韩、不合身、超预算时，只改必要项目并保留已确认条件。
+6. **质量核对与样例**：七项出稿检查、15 种覆盖边界场景的评估用例，避免编造商品和伪装图片处理。
 
-### A. Codex（推荐：从 GitHub 安装）
+## 安装到 Codex
 
-在 Codex 对话里调用内置的 `$skill-installer`，告诉它：
+在 Codex 对话中使用技能安装器（若该版本提供）：
 
 ```text
-$skill-installer 请安装这个技能：
+$skill-installer 请安装这个技能目录：
 https://github.com/mindnature/PersonalStyling/tree/main/.agents/skills/personal-styling
 ```
 
-或者将仓库克隆到本地，在该仓库目录启动 Codex；Codex 会从 `.agents/skills/personal-styling/` 发现仓库技能。若安装后没有显示，请重新启动 Codex。
+也可以克隆本仓库，在仓库目录中运行 Codex，项目下的 `.agents/skills/personal-styling/` 供其识别；按当前 Codex 版本的 Skill 目录规则操作。安装后可显式使用 `$personal-styling`。如果未出现，可重新启动客户端检查。
 
-明确调用：`$personal-styling`，然后附上照片与穿搭需求。
+## 安装到 WorkBuddy
 
-### B. WorkBuddy（上传 ZIP）
+1. 打开本仓库 **Actions → Validate PersonalStyling Skill** 的最新成功运行，在 Artifacts 下载 **PersonalStyling-Skill** 压缩包。
+2. GitHub 下载的是 GitHub Actions 外层 ZIP：**先解压一次**，得到里面的 `personal-styling.zip`（真正的技能安装文件）。
+3. 在 WorkBuddy 的技能管理/上传入口导入这个内层 ZIP；具体入口名称以当前客户端版本为准。
+4. 安装成功后直接说：“用衣品选衣技能分析我的全身照和正脸照”。
 
-1. 从本项目的技能目录 [`.agents/skills/personal-styling`](.agents/skills/personal-styling) 获取完整技能文件夹；也可以直接使用维护者提供的同版本 **personal-styling.zip** 安装包。
-2. 在 WorkBuddy 打开 **专家·技能·连接器 → 技能 → 添加技能 → 上传技能**，选择包含完整 `personal-styling/SKILL.md` 与 `references/` 的 ZIP。
-3. 安装完成后，在对话里说“使用衣品选衣技能，给我搭配三套适合开会的衣服”，并上传照片。
+也可让维护者或开发者执行 `python scripts/package_skill.py` 自行生成 `dist/personal-styling.zip`。这个命令只用于发布包，普通使用者**不需要 Python 或 Node.js**。ZIP 内有 `personal-styling/SKILL.md` 和完整的 `references/` 文件夹。
 
-不依赖 WorkBuddy 市场上架；这是**自己上传**的技能包，不要误认它已经在官方技能市场上线。具体界面名称以 WorkBuddy 客户端实际版本为准。
-
-对于想自行打包的开发者：执行 `python scripts/package_skill.py`，会在 `dist/personal-styling.zip` 生成标准目录结构的安装包。打包 Python 仅用于发布，不是普通用户使用 Skill 的前置条件。
-
-### C. 其他兼容 Agent Skills 的宿主
-
-将完整的 `.agents/skills/personal-styling` 文件夹放到宿主支持的个人或项目 Skills 目录。不得只复制单独的 SKILL.md 并丢掉 `references/`；完整包能保留分析规范和使用示例。
-
-## 安装后怎么说
+## 示例对话
 
 ```text
-使用 PersonalStyling 帮我做私人形象分析。
+请使用 PersonalStyling 技能。
 我上传了全身照和正脸照。
-希望 70% 成熟稳重 + 30% 清爽少年感。
-场景：讲课 / 科研会议；季节：秋冬；整套预算：1000 元。
-请先分析照片里实际可见的体型比例、发型和穿着效果，
-再给我三套上衣、裤子、鞋子、配饰和发型的完整搭配，
-说明版型、配色、原因、购买优先级和理发店沟通话术。
+希望成熟稳重 70%＋少年感 30%，主要用于高校讲课与会议。
+本次新增采购总预算 800 元，已有深灰直筒裤和白鞋。
+先说照片真正能看见的版型问题与适合尝试的发型，
+再给我三套明显不同、实际能穿的完整穿搭。
+列出旧衣复用、新购物品、预算上限和理发店沟通语。
 ```
 
-你也可以不提供照片，只问“这两件衣服怎么搭”“什么发型适合我”“用我已有的衣服组成三套造型”。
+不用上传照片也可以直接问“我这两件上衣如何搭”“理发师应该怎么剪”“预算不变，B 方案太显老，帮我局部修改”。
 
-## 这是什么 / 不是什么
+## 能力边界
 
-| 已经提供 | 取决于宿主或尚未提供 |
+| 已由 Skill 提供 | 取决于宿主工具 |
 |---|---|
-| 中国本土审美完整指导规则 | 主动读取/理解照片（需宿主视觉能力） |
-| 个人风格 × 场景 × 预算工作流 | 本人虚拟试穿图片（需宿主生图/修图） |
-| 三套可执行全身搭配及发型话术 | 京东/淘宝实时商品和价格（需搜索能力） |
-| 衣橱优先复用、隐私与可靠性原则 | 独立 App、精确量体、自动下单 |
+| 中国本土审美、个性化推理流程 | 用户照片的视觉理解 |
+| 衣长/肩线/裤脚等具体检查方法 | 编辑本人试穿效果图 |
+| 三套差异化造型与发型建议 | 当前电商商品、价格与库存 |
+| 预算去重、旧衣复用、反馈修订 | 持久化个人衣橱 |
+| 图片隐私与禁止瞎编规则 | 对照片做真实精确量体（不承诺） |
 
-## 项目结构
+## 技能目录
 
 ```text
 PersonalStyling/
 ├── .agents/skills/personal-styling/
-│   ├── SKILL.md                 # 必需：技能入口
+│   ├── SKILL.md
 │   └── references/
 │       ├── aesthetic-standard.md
 │       ├── photo-analysis.md
+│       ├── fit-and-hair.md
 │       ├── outfit-playbook.md
+│       ├── budget-and-wardrobe.md
+│       ├── feedback-loop.md
+│       ├── quality-review.md
 │       ├── capability-and-privacy.md
 │       └── examples.md
-├── scripts/package_skill.py     # 可选：发布者生成 WorkBuddy ZIP
-├── tests/test_skill.py          # 静态检查
-├── AGENTS.md                    # 开发本仓库的规则
-└── README.md
+├── evals/cases.json           # 测试场景与期望行为（不是模型实际评分）
+├── tests/test_skill.py        # 结构、规范及打包静态校验
+├── scripts/package_skill.py   # 发布者打包脚本
+└── AGENTS.md
 ```
 
-## 维护与验证
+## 验证与隐私
 
-仅维护者需要 Python 3（标准库），运行 `python -m unittest discover -s tests -v`。GitHub Actions 会验证技能目录、元信息和 ZIP 结构。普通安装者完全不需要运行此命令。
+维护者执行 `python -m unittest discover -s tests -v` 检查元信息、引用文件与 ZIP 结构。GitHub Actions 自动测试**不代表真实宿主模型穿搭结果已经完成真人评测**，建议按 `evals/cases.json` 在 Codex/WorkBuddy 中逐条试用和反馈。
 
-原先可选 API 的网页工作台保留在历史分支 [legacy-webapp](https://github.com/mindnature/PersonalStyling/tree/legacy-webapp)，**不属于本 Skill**。main 分支是无独立 API 的纯技能版本。
+用户照片不属于公开代码仓库。勿把本人或他人人像加入 Git 提交。宿主对用户输入的处理遵从其产品规则，不承诺“照片绝不上传”。
 
-## 安全
-
-个人照片不属于代码仓库。不要将真人照片、联系方式、敏感档案上传到公开 GitHub。Skill 不能替宿主承诺“照片永不上传/永不保存”；使用平台会按自己的服务规则处理输入。
-
-MIT License · mindnature
+此前网页版在 [legacy-webapp](https://github.com/mindnature/PersonalStyling/tree/legacy-webapp) 分支，与无需独立 API 的 Skill 主线分开。开源许可证为 MIT。
