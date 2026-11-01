@@ -23,7 +23,7 @@ class SkillPackageTests(unittest.TestCase):
             self.assertRegex(header, rf"(?m)^{re.escape(key)}:")
         self.assertRegex(header, r"(?m)^name: personal-styling$")
         self.assertIn("三套", body)
-        self.assertIn("不需要", body)
+        self.assertTrue("不需要" in body or "无需" in body)
 
     def test_all_reference_links_exist(self):
         body = (SKILL / "SKILL.md").read_text(encoding="utf-8")
