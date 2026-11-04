@@ -1,0 +1,891 @@
+{
+  "schema_version": "2.3.0",
+  "curated_on": "2026-11-04",
+  "records_count": 19,
+  "purpose": "有来源、分证据级别的穿搭实例与教学索引。不是图像资产库，不是抓取平台全量帖文，也不代表用户喜欢。",
+  "field_notes": {
+    "kind": "creator_outfit / creator_video / celebrity_editorial / brand_lookbook / curator_video",
+    "confidence": "high=原作者完整搭配说明或官方同一造型单品组；medium=只有部分明确；low=视频/采访主题，绝不假装是完整LOOK",
+    "pieces": "null 表示原文或已验证页面不足以识别该部位；不能靠风格常识补上",
+    "published_on": "来自原始页面可见发布日期或编辑日期；品牌季节页面可能缺少准确发布日期，不能等同首次上架时间",
+    "verified_on": "本轮公开来源交叉核对的日期；不等于未来永久有效",
+    "user_preference": "unknown 默认，只有用户对指定案例明确表达态度后才能在个人会话里记录；不要公开存储用户面部信息"
+  },
+  "entries": [
+    {
+      "id": "BLOG-CHAMMY-001",
+      "title": "用人话讲穿搭·皮衣与格纹叠穿",
+      "creator": "痴五安 chammy",
+      "source_label": "博主原帖",
+      "kind": "creator_outfit",
+      "source_url": "https://www.bilibili.com/opus/1117652268316884999",
+      "source_segment": "1️⃣皮衣",
+      "published_on": "2025-09-28",
+      "verified_on": "2026-11-04",
+      "confidence": "high",
+      "styles": [
+        "复古街头",
+        "工装复古",
+        "松弛设计感"
+      ],
+      "colors": [
+        "深酒红",
+        "深蓝"
+      ],
+      "materials": [
+        "皮革",
+        "牛仔",
+        "格纹"
+      ],
+      "shapes": [
+        "短夹克",
+        "弯刀牛仔裤",
+        "腰线重构"
+      ],
+      "scenes": [
+        "城市休闲",
+        "聚会"
+      ],
+      "pieces": {
+        "outerwear": "深酒红擦色短皮衣",
+        "top": "格纹衬衫叠穿内搭",
+        "bottom": "廓形弯刀牛仔裤",
+        "shoes": null,
+        "accessories": "针织帽/项链等为作者举例，不确认实际同套佩戴"
+      },
+      "methods": [
+        "硬挺皮革与硬挺牛仔呼应",
+        "用格纹叠穿增加内层变化",
+        "下摆处理影响腰线"
+      ],
+      "limitations": "原帖逐项解读与配图；鞋与配饰仅说明搭配建议，不视为照片实物",
+      "rights": "link_only_no_image_redistribution",
+      "user_preference": "unknown"
+    },
+    {
+      "id": "BLOG-CHAMMY-002",
+      "title": "用人话讲穿搭·细格纹配军绿工装裤",
+      "creator": "痴五安 chammy",
+      "source_label": "博主原帖",
+      "kind": "creator_outfit",
+      "source_url": "https://www.bilibili.com/opus/1117652268316884999",
+      "source_segment": "2️⃣格子衬衫",
+      "published_on": "2025-09-28",
+      "verified_on": "2026-11-04",
+      "confidence": "high",
+      "styles": [
+        "复古工装",
+        "松弛设计感",
+        "City Boy"
+      ],
+      "colors": [
+        "低饱和格纹",
+        "军绿",
+        "小面积黄"
+      ],
+      "materials": [
+        "格纹",
+        "工装棉"
+      ],
+      "shapes": [
+        "短款格纹",
+        "直筒工装裤"
+      ],
+      "scenes": [
+        "日常通勤",
+        "休闲"
+      ],
+      "pieces": {
+        "outerwear": null,
+        "top": "低饱和细格纹短衬衫",
+        "bottom": "军绿色工装裤",
+        "shoes": "黄棕色工装靴（作者搭配建议）",
+        "accessories": "帽子与帆布包（作者搭配建议）"
+      },
+      "methods": [
+        "格纹作为视觉焦点",
+        "控制衬衫衣长避免全部塞衣",
+        "低饱和色与一处亮色"
+      ],
+      "limitations": "原作者阐述了格纹、工装裤和黄靴的组合逻辑；是否每项同框需以配图核对",
+      "rights": "link_only_no_image_redistribution",
+      "user_preference": "unknown"
+    },
+    {
+      "id": "BLOG-CHAMMY-003",
+      "title": "八件衬衫·棕白灰细格纹 LOOK1",
+      "creator": "痴五安 chammy",
+      "source_label": "博主原帖",
+      "kind": "creator_outfit",
+      "source_url": "https://www.bilibili.com/opus/1109828139233574915",
+      "source_segment": "LOOK1",
+      "published_on": "2025-09-07",
+      "verified_on": "2026-11-04",
+      "confidence": "high",
+      "styles": [
+        "C1复古格纹",
+        "轻熟休闲",
+        "松弛设计感"
+      ],
+      "colors": [
+        "棕",
+        "白",
+        "灰"
+      ],
+      "materials": [
+        "格纹",
+        "细腻纹理"
+      ],
+      "shapes": [
+        "适度宽松",
+        "复古长裤"
+      ],
+      "scenes": [
+        "通勤",
+        "休闲"
+      ],
+      "pieces": {
+        "outerwear": null,
+        "top": "棕白撞色、灰调交织的复古格纹衬衫",
+        "bottom": "配图关联的千鸟格长裤",
+        "shoes": "配图关联的乐福鞋",
+        "accessories": "眼镜可作可选风格细节"
+      },
+      "methods": [
+        "深棕色加入白和灰平衡沉闷感",
+        "上装纹理与裤装细格纹需要控制密度",
+        "不是所有深色都要靠白裤平衡"
+      ],
+      "limitations": "作者图文与随附单品清单；不引申实时价格或用户适合的尺码",
+      "rights": "link_only_no_image_redistribution",
+      "user_preference": "unknown"
+    },
+    {
+      "id": "BLOG-CHAMMY-004",
+      "title": "八件衬衫·微落肩简约衬衫 LOOK2",
+      "creator": "痴五安 chammy",
+      "source_label": "博主原帖",
+      "kind": "creator_outfit",
+      "source_url": "https://www.bilibili.com/opus/1109828139233574915",
+      "source_segment": "LOOK2",
+      "published_on": "2025-09-07",
+      "verified_on": "2026-11-04",
+      "confidence": "medium",
+      "styles": [
+        "Clean Fit",
+        "学院简约",
+        "轻熟通勤"
+      ],
+      "colors": [
+        "中性色"
+      ],
+      "materials": [
+        "长绒棉",
+        "轻薄梭织"
+      ],
+      "shapes": [
+        "微落肩",
+        "微收身"
+      ],
+      "scenes": [
+        "通勤",
+        "高校日常"
+      ],
+      "pieces": {
+        "outerwear": null,
+        "top": "微落肩且微向内收的简约长袖衬衫",
+        "bottom": null,
+        "shoes": null,
+        "accessories": null
+      },
+      "methods": [
+        "落肩与整体收量需一起考虑",
+        "不依赖繁杂图案呈现松弛",
+        "作者提到可走 Ivy 风格"
+      ],
+      "limitations": "原文描述上衣版型；未核实单套裤鞋，不推断",
+      "rights": "link_only_no_image_redistribution",
+      "user_preference": "unknown"
+    },
+    {
+      "id": "BLOG-CHAMMY-005",
+      "title": "普通单品进阶·针织Polo与宽牛仔 LOOK1",
+      "creator": "痴五安 chammy",
+      "source_label": "博主原帖",
+      "kind": "creator_outfit",
+      "source_url": "https://www.bilibili.com/opus/1121734132212170768",
+      "source_segment": "LOOK1",
+      "published_on": "2025-10-09",
+      "verified_on": "2026-11-04",
+      "confidence": "high",
+      "styles": [
+        "复古学院",
+        "City Boy",
+        "轻熟休闲"
+      ],
+      "colors": [
+        "杂色针织",
+        "深蓝"
+      ],
+      "materials": [
+        "针织",
+        "牛仔"
+      ],
+      "shapes": [
+        "层次领型",
+        "宽松长裤"
+      ],
+      "scenes": [
+        "休闲",
+        "校园生活"
+      ],
+      "pieces": {
+        "outerwear": null,
+        "top": "宽松复古针织 Polo + 衬衫叠穿",
+        "bottom": "深蓝宽松牛仔裤",
+        "shoes": "复古德训鞋",
+        "accessories": "轻量包/眼镜（页面清单中的可选配件）"
+      },
+      "methods": [
+        "领口形态胜过一味靠纯色",
+        "针织柔软感与牛仔结构感对比",
+        "鞋型简洁可压住多层叠穿"
+      ],
+      "limitations": "作者LOOK1单品清单有对应类型；可能带推广属性，不代表用户应购买",
+      "rights": "link_only_no_image_redistribution",
+      "user_preference": "unknown"
+    },
+    {
+      "id": "BLOG-CHAMMY-006",
+      "title": "普通单品进阶·格纹与解构短夹克 LOOK3",
+      "creator": "痴五安 chammy",
+      "source_label": "博主原帖",
+      "kind": "creator_outfit",
+      "source_url": "https://www.bilibili.com/opus/1121734132212170768",
+      "source_segment": "LOOK3",
+      "published_on": "2025-10-09",
+      "verified_on": "2026-11-04",
+      "confidence": "high",
+      "styles": [
+        "松弛设计感",
+        "复古街头",
+        "结构感休闲"
+      ],
+      "colors": [
+        "大地色",
+        "深色"
+      ],
+      "materials": [
+        "格纹",
+        "毛呢",
+        "卫衣面料"
+      ],
+      "shapes": [
+        "短夹克",
+        "弯刀裤"
+      ],
+      "scenes": [
+        "休闲",
+        "创意工作"
+      ],
+      "pieces": {
+        "outerwear": "复古解构短款毛呢夹克",
+        "top": "大地色肌理格纹衬衫",
+        "bottom": "柔软弯刀休闲裤",
+        "shoes": null,
+        "accessories": null
+      },
+      "methods": [
+        "短款外套与变化裤型构成轮廓重点",
+        "格纹可以藏在外套里只露局部",
+        "不为设计感牺牲裤脚整洁"
+      ],
+      "limitations": "原作者LOOK3公开单品与图片；鞋型不确定",
+      "rights": "link_only_no_image_redistribution",
+      "user_preference": "unknown"
+    },
+    {
+      "id": "BLOG-CHAMMY-007",
+      "title": "开学校园九套·华夫格针织学院风 LOOK1",
+      "creator": "痴五安 chammy",
+      "source_label": "博主原帖",
+      "kind": "creator_outfit",
+      "source_url": "https://www.bilibili.com/opus/1101681230537031683",
+      "source_segment": "LOOK1 知识分子风",
+      "published_on": "2025-08-16",
+      "verified_on": "2026-11-04",
+      "confidence": "medium",
+      "styles": [
+        "复古学院",
+        "知性松弛"
+      ],
+      "colors": [
+        "低饱和"
+      ],
+      "materials": [
+        "华夫格针织",
+        "棉质"
+      ],
+      "shapes": [
+        "微宽松",
+        "不过分垂坠"
+      ],
+      "scenes": [
+        "高校日常",
+        "通勤"
+      ],
+      "pieces": {
+        "outerwear": "适度宽松华夫格针织开衫",
+        "top": "简洁T恤或衬衫（作者建议）",
+        "bottom": "Chino休闲裤",
+        "shoes": null,
+        "accessories": null
+      },
+      "methods": [
+        "学院感来自轻微设计差异而非学院制服",
+        "针织面料与不过长的衣身更重要"
+      ],
+      "limitations": "原作者图文存在；网页加载状态可能不稳定；鞋款未核实",
+      "rights": "link_only_no_image_redistribution",
+      "user_preference": "unknown"
+    },
+    {
+      "id": "BLOG-TANGSHUI-001",
+      "title": "少年感毛衣背心与衬衫叠穿",
+      "creator": "躺水_",
+      "source_label": "原创视频",
+      "kind": "creator_video",
+      "source_url": "https://www.bilibili.com/list/20039054?bvid=BV1mw411J7Xv&oid=326312091",
+      "source_segment": "视频标题",
+      "published_on": "2024-01-16",
+      "verified_on": "2026-11-04",
+      "confidence": "low",
+      "styles": [
+        "学院叠穿",
+        "少年感"
+      ],
+      "colors": [
+        "未核实"
+      ],
+      "materials": [
+        "针织",
+        "衬衫"
+      ],
+      "shapes": [
+        "针织背心层次"
+      ],
+      "scenes": [
+        "校园",
+        "休闲"
+      ],
+      "pieces": {
+        "outerwear": "毛衣背心",
+        "top": "衬衫叠穿",
+        "bottom": null,
+        "shoes": null,
+        "accessories": null
+      },
+      "methods": [
+        "围绕领口/背心层次参考",
+        "视频演示不同于经过逐帧核对的完整造型"
+      ],
+      "limitations": "只核实创作者与视频标题及标签，具体裤鞋不得声称已核验",
+      "rights": "link_only_no_image_redistribution",
+      "user_preference": "unknown"
+    },
+    {
+      "id": "BLOG-TANGSHUI-002",
+      "title": "入秋简约通勤穿搭与胶囊衣橱",
+      "creator": "躺水_",
+      "source_label": "原创视频",
+      "kind": "creator_video",
+      "source_url": "https://www.bilibili.com/list/20039054?bvid=BV1NC4PeLEiz&oid=113232618655899",
+      "source_segment": "视频标题",
+      "published_on": "2024-10-01",
+      "verified_on": "2026-11-04",
+      "confidence": "low",
+      "styles": [
+        "Clean Fit",
+        "日常通勤",
+        "松弛休闲"
+      ],
+      "colors": [
+        "未核实"
+      ],
+      "materials": [
+        "未核实"
+      ],
+      "shapes": [
+        "简约通勤"
+      ],
+      "scenes": [
+        "通勤"
+      ],
+      "pieces": {
+        "outerwear": null,
+        "top": null,
+        "bottom": null,
+        "shoes": null,
+        "accessories": null
+      },
+      "methods": [
+        "参考原作者如何构建高频重复穿搭",
+        "没有逐帧查看前不提取完整衣服组合"
+      ],
+      "limitations": "仅验证视频标题、作者、主题；这是风格学习视频入口不是具体实拍造型",
+      "rights": "link_only_no_image_redistribution",
+      "user_preference": "unknown"
+    },
+    {
+      "id": "BLOG-CHAMMY-008",
+      "title": "普通单品进阶·短皮衣与蓝格纹叠穿 LOOK4",
+      "creator": "痴五安 chammy",
+      "source_label": "博主原帖",
+      "kind": "creator_outfit",
+      "source_url": "https://www.bilibili.com/opus/1121734132212170768",
+      "source_segment": "LOOK4",
+      "published_on": "2025-10-09",
+      "verified_on": "2026-11-04",
+      "confidence": "medium",
+      "styles": [
+        "复古街头",
+        "松弛设计感"
+      ],
+      "colors": [
+        "黑",
+        "蓝格纹"
+      ],
+      "materials": [
+        "皮革",
+        "棉衬衫"
+      ],
+      "shapes": [
+        "短外套",
+        "层次内搭"
+      ],
+      "scenes": [
+        "休闲",
+        "社交"
+      ],
+      "pieces": {
+        "outerwear": "短款立领皮衣",
+        "top": "蓝色格纹衬衫与T恤",
+        "bottom": null,
+        "shoes": null,
+        "accessories": null
+      },
+      "methods": [
+        "多层叠穿可只突出一处图案",
+        "短皮衣比长款更强调结构"
+      ],
+      "limitations": "单品清单支持上装，裤鞋未核实",
+      "rights": "link_only_no_image_redistribution",
+      "user_preference": "unknown"
+    },
+    {
+      "id": "STAR-JING-001",
+      "title": "同色牛仔与小胸针点缀",
+      "creator": "井柏然",
+      "source_label": "媒体图文",
+      "kind": "celebrity_editorial",
+      "source_url": "https://www.marieclaire.com.tw/fashion/news/95643",
+      "source_segment": "一身Denim也有胸針細節",
+      "published_on": "2026-09-01",
+      "verified_on": "2026-11-04",
+      "confidence": "medium",
+      "styles": [
+        "现代复古",
+        "都市设计感",
+        "干净利落"
+      ],
+      "colors": [
+        "蓝色"
+      ],
+      "materials": [
+        "牛仔"
+      ],
+      "shapes": [
+        "同色系",
+        "单点配饰"
+      ],
+      "scenes": [
+        "创意工作",
+        "城市日常"
+      ],
+      "pieces": {
+        "outerwear": null,
+        "top": "牛仔衬衫",
+        "bottom": "同色系牛仔裤",
+        "shoes": null,
+        "accessories": "小胸针"
+      },
+      "methods": [
+        "同色系通过纹理与层次区别单调",
+        "小面积装饰胜过满身配件"
+      ],
+      "limitations": "时尚媒体报道与相关配图，非明星个人原帖；鞋不确定",
+      "rights": "link_only_no_image_redistribution",
+      "user_preference": "unknown"
+    },
+    {
+      "id": "STAR-JING-002",
+      "title": "黑色高领与黑白肌理外套",
+      "creator": "井柏然",
+      "source_label": "媒体图文",
+      "kind": "celebrity_editorial",
+      "source_url": "https://www.marieclaire.com.tw/fashion/news/95643",
+      "source_segment": "出席Chanel 2026春夏大秀",
+      "published_on": "2026-09-01",
+      "verified_on": "2026-11-04",
+      "confidence": "medium",
+      "styles": [
+        "都市设计感",
+        "轻熟质感"
+      ],
+      "colors": [
+        "黑",
+        "黑白"
+      ],
+      "materials": [
+        "针织",
+        "肌理织物"
+      ],
+      "shapes": [
+        "轮廓外套",
+        "简化内搭"
+      ],
+      "scenes": [
+        "正式社交",
+        "展览"
+      ],
+      "pieces": {
+        "outerwear": "黑白肌理外套",
+        "top": "黑色高领打底",
+        "bottom": null,
+        "shoes": null,
+        "accessories": "简洁小配件"
+      },
+      "methods": [
+        "外套已有纹理时内搭尽量收敛",
+        "低对比也能有材质设计感"
+      ],
+      "limitations": "媒体明确披露上装；不把高级时装等同于普通人日常适配",
+      "rights": "link_only_no_image_redistribution",
+      "user_preference": "unknown"
+    },
+    {
+      "id": "STAR-JING-003",
+      "title": "白衬衫与深色编织包私服",
+      "creator": "井柏然",
+      "source_label": "媒体图文",
+      "kind": "celebrity_editorial",
+      "source_url": "https://www.marieclaire.com.tw/fashion/news/95643",
+      "source_segment": "井柏然私服穿搭拆解",
+      "published_on": "2026-09-01",
+      "verified_on": "2026-11-04",
+      "confidence": "medium",
+      "styles": [
+        "Clean Fit",
+        "轻熟都市"
+      ],
+      "colors": [
+        "白",
+        "深色"
+      ],
+      "materials": [
+        "棉衬衫",
+        "编织皮革"
+      ],
+      "shapes": [
+        "基本款",
+        "包袋材质对比"
+      ],
+      "scenes": [
+        "通勤",
+        "城市社交"
+      ],
+      "pieces": {
+        "outerwear": null,
+        "top": "白色衬衫",
+        "bottom": null,
+        "shoes": null,
+        "accessories": "深色编织皮革包"
+      },
+      "methods": [
+        "朴素上衣用材质感强的包增加层次",
+        "不必用堆叠衣物制造设计感"
+      ],
+      "limitations": "媒体报道描述白衬衫与包袋，其他单品未知",
+      "rights": "link_only_no_image_redistribution",
+      "user_preference": "unknown"
+    },
+    {
+      "id": "STAR-WANG-001",
+      "title": "轻量都市机能与结构感",
+      "creator": "王安宇",
+      "source_label": "品牌采访报道",
+      "kind": "celebrity_editorial",
+      "source_url": "https://finance.sina.com.cn/wm/2026-06-16/doc-inicrcpn6206149.shtml",
+      "source_segment": "HYPEBEAST采访（新浪转载）",
+      "published_on": "2026-06-16",
+      "verified_on": "2026-11-04",
+      "confidence": "low",
+      "styles": [
+        "轻机能",
+        "都市设计感",
+        "运动休闲"
+      ],
+      "colors": [
+        "低饱和"
+      ],
+      "materials": [
+        "机能织物"
+      ],
+      "shapes": [
+        "轻量廓形",
+        "结构线条"
+      ],
+      "scenes": [
+        "城市通勤",
+        "旅行"
+      ],
+      "pieces": {
+        "outerwear": "轻机能外套（报道的整体风格方向，非某一精确LOOK）",
+        "top": null,
+        "bottom": null,
+        "shoes": "复古跑鞋/山系鞋为采访谈论的类别，不保证某张照片里穿着",
+        "accessories": null
+      },
+      "methods": [
+        "把功能细节融入城市生活",
+        "运动与时装之间保持可穿性"
+      ],
+      "limitations": "采访报道为原媒体内容之转载，属于风格论述，不是已核验完整单套穿搭",
+      "rights": "link_only_no_image_redistribution",
+      "user_preference": "unknown"
+    },
+    {
+      "id": "BRAND-UNIQLO-001",
+      "title": "羊毛混纺哈灵顿外套与廓形长裤",
+      "creator": "UNIQLO:C",
+      "source_label": "官方造型",
+      "kind": "brand_lookbook",
+      "source_url": "https://www.uniqlo.cn/CPJ_26FW_BOOK_M.html?index=3",
+      "source_segment": "2026FW 男装造型单品组1",
+      "published_on": "2026-10-15",
+      "verified_on": "2026-11-04",
+      "confidence": "high",
+      "styles": [
+        "松弛设计感",
+        "Clean Fit",
+        "都市休闲"
+      ],
+      "colors": [
+        "页面未标注特定配色"
+      ],
+      "materials": [
+        "羊毛混纺"
+      ],
+      "shapes": [
+        "哈灵顿短夹克",
+        "廓形长裤"
+      ],
+      "scenes": [
+        "通勤",
+        "休闲"
+      ],
+      "pieces": {
+        "outerwear": "羊毛混纺哈灵顿茄克（489482）",
+        "top": "HEATTECH翻领T（486863），页面列为造型单品",
+        "bottom": "廓形长裤（484875）",
+        "shoes": null,
+        "accessories": "皮带（489493）"
+      },
+      "methods": [
+        "短外套与廓形长裤的上下体量平衡",
+        "既有挺括也有松量"
+      ],
+      "limitations": "官方商品组，具体颜色和鞋款须看单套原图；发布日期为2026FW系列季节，所填日期指近月系列入口非正式首发日期",
+      "rights": "link_only_no_image_redistribution",
+      "user_preference": "unknown"
+    },
+    {
+      "id": "BRAND-UNIQLO-002",
+      "title": "针织衬衫式开衫与牛仔风廓形裤",
+      "creator": "UNIQLO:C",
+      "source_label": "官方造型",
+      "kind": "brand_lookbook",
+      "source_url": "https://www.uniqlo.cn/CPJ_26FW_BOOK_M.html?index=3",
+      "source_segment": "2026FW 男装造型单品组2",
+      "published_on": "2026-10-15",
+      "verified_on": "2026-11-04",
+      "confidence": "high",
+      "styles": [
+        "City Boy",
+        "松弛设计感",
+        "轻熟休闲"
+      ],
+      "colors": [
+        "页面未标注特定配色"
+      ],
+      "materials": [
+        "针织",
+        "牛仔"
+      ],
+      "shapes": [
+        "针织外搭",
+        "宽直裤"
+      ],
+      "scenes": [
+        "日常通勤",
+        "休闲"
+      ],
+      "pieces": {
+        "outerwear": "羊毛混纺衬衫式针织开衫（487488）",
+        "top": "HEATTECH高领T（485824），页面列为造型单品",
+        "bottom": "牛仔风廓形长裤（488743）",
+        "shoes": null,
+        "accessories": "皮带（489493）"
+      },
+      "methods": [
+        "针织的软轮廓和牛仔裤的硬轮廓形成差异",
+        "优先检查裤脚堆积"
+      ],
+      "limitations": "官方造型清单，不把单品编号当已知尺码和颜色",
+      "rights": "link_only_no_image_redistribution",
+      "user_preference": "unknown"
+    },
+    {
+      "id": "BRAND-UNIQLO-003",
+      "title": "仿羊羔绒立领夹克与格纹衬衫",
+      "creator": "UNIQLO:C",
+      "source_label": "官方造型",
+      "kind": "brand_lookbook",
+      "source_url": "https://www.uniqlo.cn/CPJ_26FW_BOOK_M.html?index=3",
+      "source_segment": "2026FW 带格纹内搭造型",
+      "published_on": "2026-10-15",
+      "verified_on": "2026-11-04",
+      "confidence": "high",
+      "styles": [
+        "复古格纹",
+        "城市休闲",
+        "层次设计"
+      ],
+      "colors": [
+        "页面未标注特定配色"
+      ],
+      "materials": [
+        "仿羊羔绒",
+        "格纹梭织",
+        "牛仔"
+      ],
+      "shapes": [
+        "立领外套",
+        "格纹内搭"
+      ],
+      "scenes": [
+        "秋冬通勤"
+      ],
+      "pieces": {
+        "outerwear": "仿羊羔绒内里立领茄克（487936）",
+        "top": "休闲格纹长袖衬衫（488793）＋圆领针织层（487487）",
+        "bottom": "牛仔风廓形长裤（488743）",
+        "shoes": null,
+        "accessories": null
+      },
+      "methods": [
+        "格纹作为内搭而非全身最大面积",
+        "保暖层次需尊重真实温度"
+      ],
+      "limitations": "官方同一造型单品组，商品与库存可能变化",
+      "rights": "link_only_no_image_redistribution",
+      "user_preference": "unknown"
+    },
+    {
+      "id": "CURATOR-LUOLUO-001",
+      "title": "43位男装穿搭博主参考索引",
+      "creator": "落落的穿搭笔记",
+      "source_label": "博主教程",
+      "kind": "curator_video",
+      "source_url": "https://www.bilibili.com/video/BV1CtC2YpEE7/",
+      "source_segment": "完整视频",
+      "published_on": "2024-10-18",
+      "verified_on": "2026-11-04",
+      "confidence": "low",
+      "styles": [
+        "风格检索",
+        "体型参照",
+        "审美多样性"
+      ],
+      "colors": [
+        "未知"
+      ],
+      "materials": [
+        "未知"
+      ],
+      "shapes": [
+        "风格比较"
+      ],
+      "scenes": [
+        "探索"
+      ],
+      "pieces": {
+        "outerwear": null,
+        "top": null,
+        "bottom": null,
+        "shoes": null,
+        "accessories": null
+      },
+      "methods": [
+        "从多个创作者中找具体可核查投稿",
+        "避免以一个明星为全部审美标准"
+      ],
+      "limitations": "这是一条策展视频，不是具体完整造型；不能自动把视频提到的43位都当已核验创作者",
+      "rights": "link_only_no_image_redistribution",
+      "user_preference": "unknown"
+    },
+    {
+      "id": "BLOG-CHAMMY-009",
+      "title": "三类男鞋搭配方法教程",
+      "creator": "痴五安 chammy",
+      "source_label": "博主教程",
+      "kind": "creator_video",
+      "source_url": "https://www.bilibili.com/video/BV1SXPDz9Er8/",
+      "source_segment": "视频",
+      "published_on": "2026-03-09",
+      "verified_on": "2026-11-04",
+      "confidence": "low",
+      "styles": [
+        "鞋型适配",
+        "城市休闲",
+        "风格组合"
+      ],
+      "colors": [
+        "未知"
+      ],
+      "materials": [
+        "未知"
+      ],
+      "shapes": [
+        "鞋型差异"
+      ],
+      "scenes": [
+        "日常"
+      ],
+      "pieces": {
+        "outerwear": null,
+        "top": null,
+        "bottom": null,
+        "shoes": null,
+        "accessories": null
+      },
+      "methods": [
+        "把鞋的风格与裤脚宽度和上身气质一起判断",
+        "用户不喜欢皮鞋时不要强推"
+      ],
+      "limitations": "仅由原始视频标题和简介确认，不能断言作者实际示范了哪些具体鞋款",
+      "rights": "link_only_no_image_redistribution",
+      "user_preference": "unknown"
+    }
+  ]
+}
