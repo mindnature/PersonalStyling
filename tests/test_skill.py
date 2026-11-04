@@ -24,7 +24,7 @@ class SkillPackageTests(unittest.TestCase):
                     "description_zh", "description_en", "version", "author"]:
             self.assertRegex(self.header, rf"(?m)^{re.escape(key)}:")
         self.assertRegex(self.header, r"(?m)^name: personal-styling$")
-        self.assertRegex(self.header, r"(?m)^version: 2\.2\.0$")
+        self.assertRegex(self.header, r"(?m)^version: 2\.3\.0$")
 
     def test_references_all_exist(self):
         refs = set(re.findall(r"@references/([a-z][a-z0-9-]*\.md)", self.body))
@@ -96,6 +96,8 @@ class SkillPackageTests(unittest.TestCase):
                 self.assertIn("personal-styling/references/style-discovery.md", paths)
                 self.assertIn("personal-styling/references/curated-look-index.json", paths)
                 self.assertIn("personal-styling/references/quality-review.md", paths)
+                self.assertIn("personal-styling/references/outfit-cases.json", paths)
+                self.assertIn("personal-styling/references/library-search.md", paths)
                 self.assertTrue(all(p.startswith("personal-styling/") for p in paths))
                 self.assertTrue(all(not p.startswith("/") and ".." not in Path(p).parts for p in paths))
                 self.assertTrue(all(not p.endswith(".py") and not p.endswith(".env") for p in paths))

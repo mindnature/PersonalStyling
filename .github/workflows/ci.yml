@@ -15,6 +15,10 @@ jobs:
           python-version: "3.11"
       - name: Validate skill and references
         run: python -m unittest discover -s tests -v
+      - name: Search curated outfit database
+        run: |
+          python scripts/search_looks.py "格纹" --kind creator_outfit --json > /tmp/look-results.json
+          python -c "import json; v=json.load(open('/tmp/look-results.json')); assert v and all(x['kind']=='creator_outfit' for x in v); print(len(v), 'verified indexed records found')"
       - name: Build WorkBuddy package
         run: python scripts/package_skill.py
       - name: Check ZIP layout
