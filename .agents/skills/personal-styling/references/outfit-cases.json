@@ -672,7 +672,7 @@
       "kind": "brand_lookbook",
       "source_url": "https://www.uniqlo.cn/CPJ_26FW_BOOK_M.html?index=3",
       "source_segment": "2026FW 男装造型单品组1",
-      "published_on": "2026-10-15",
+      "published_on": null,
       "verified_on": "2026-11-04",
       "confidence": "high",
       "styles": [
@@ -705,7 +705,7 @@
         "短外套与廓形长裤的上下体量平衡",
         "既有挺括也有松量"
       ],
-      "limitations": "官方商品组，具体颜色和鞋款须看单套原图；发布日期为2026FW系列季节，所填日期指近月系列入口非正式首发日期",
+      "limitations": "官方商品组，具体颜色和鞋款须看单套原图；发布日期为2026FW系列季节，所填日期指近月系列入口非正式首发日期；该系列主页没有明确可核实的首次发布日期",
       "rights": "link_only_no_image_redistribution",
       "user_preference": "unknown"
     },
@@ -717,7 +717,7 @@
       "kind": "brand_lookbook",
       "source_url": "https://www.uniqlo.cn/CPJ_26FW_BOOK_M.html?index=3",
       "source_segment": "2026FW 男装造型单品组2",
-      "published_on": "2026-10-15",
+      "published_on": null,
       "verified_on": "2026-11-04",
       "confidence": "high",
       "styles": [
@@ -751,7 +751,7 @@
         "针织的软轮廓和牛仔裤的硬轮廓形成差异",
         "优先检查裤脚堆积"
       ],
-      "limitations": "官方造型清单，不把单品编号当已知尺码和颜色",
+      "limitations": "官方造型清单，不把单品编号当已知尺码和颜色；该系列主页没有明确可核实的首次发布日期",
       "rights": "link_only_no_image_redistribution",
       "user_preference": "unknown"
     },
@@ -763,7 +763,7 @@
       "kind": "brand_lookbook",
       "source_url": "https://www.uniqlo.cn/CPJ_26FW_BOOK_M.html?index=3",
       "source_segment": "2026FW 带格纹内搭造型",
-      "published_on": "2026-10-15",
+      "published_on": null,
       "verified_on": "2026-11-04",
       "confidence": "high",
       "styles": [
@@ -797,7 +797,7 @@
         "格纹作为内搭而非全身最大面积",
         "保暖层次需尊重真实温度"
       ],
-      "limitations": "官方同一造型单品组，商品与库存可能变化",
+      "limitations": "官方同一造型单品组，商品与库存可能变化；该系列主页没有明确可核实的首次发布日期",
       "rights": "link_only_no_image_redistribution",
       "user_preference": "unknown"
     },
