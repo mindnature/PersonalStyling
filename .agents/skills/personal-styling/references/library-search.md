@@ -2,8 +2,8 @@
 
 ## 核心资产
 
-- **\`outfit-cases.json\`**：本次整理的具体博主造型、明星媒体造型、官方 Lookbook 单品组及视频教程来源。
-- **\`curated-look-index.json\`**：早期五条品牌种子/图库入口，仅作拓展参考，不要和新库记录混成“独立图片数量”。
+- **`outfit-cases.json`**：本次整理的具体博主造型、明星媒体造型、官方 Lookbook 单品组及视频教程来源。
+- **`curated-look-index.json`**：早期五条品牌种子/图库入口，仅作拓展参考，不要和新库记录混成“独立图片数量”。
 - 所有照片仍在原作者/品牌网站上，**仓库不储存、镜像或再发布图片**。source_url 是页面入口，不是直接图片文件，也不能保证永远有效。
 - 记录只有 verified_on=2026-11-04 的核验状态，**不等于实时图库**。网页失效须明确告知，不得伪称仍可访问。
 
@@ -22,7 +22,7 @@ confidence=high 是**原文/原始单品组的证据充分**，并非照片识�
 ## 真实操作流程
 
 1. **先区分用户现在的目标**：寻找风格 / 筛选局部 / 套装适配 / 购买；只有“购买”才查商品。用户不满意之前的推荐时，必须先找新的图片案例，而不是重绘旧的深棕套装。
-2. **从新案例库筛来源**：只读 JSON 即可，按 styles/shapes/materials/colors/scenes 寻找。可选用随仓库提供的 \`scripts/search_looks.py\`（发布/维护才需要 Python；普通 Skill 使用不必执行脚本）。
+2. **从新案例库筛来源**：只读 JSON 即可，按 styles/shapes/materials/colors/scenes 寻找。可选用随仓库提供的 `scripts/search_looks.py`（发布/维护才需要 Python；普通 Skill 使用不必执行脚本）。
 3. **有网络能力时复核 source_url**：原页面仍存在、图片能看、来源类型与时段是否匹配；查到更多原帖后附来源。不能联网时只能称“截至 2026-11-04 已整理案例”，不说“刚刚看了最新”。
 4. **反单一审美**：一次优先挑 4–6 个不同**服装结构**，同一创作者最多 2 个案例，不能 5 条全是同一个博主换颜色；优先原创中国博主，品牌/明星作为补充。源不足则如实少给。
 5. **案例卡片结构**：原始 URL、作者/品牌、发布年、source_segment、证据类别、可见服装（未知部位填“未核实”）、值得学的组合方法、差异点。
@@ -33,11 +33,11 @@ confidence=high 是**原文/原始单品组的证据充分**，并非照片识�
 
 ## 离线检索示例（开发者可选）
 
-\`\`\`bash
+```bash
 python scripts/search_looks.py "格纹 松弛" --min-confidence medium
 python scripts/search_looks.py "针织" --kind creator_outfit --limit 5
 python scripts/search_looks.py "机能" --min-confidence low --json
-\`\`\`
+```
 
 默认过滤证据不足的低置信记录；可手动放宽为 low，但要严格说明信息仅来自视频标题/媒体主题。脚本不联网、不用 API、不读取照片、不储存用户资料，输出只是本地案例搜索结果。
 

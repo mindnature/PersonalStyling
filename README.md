@@ -1,4 +1,4 @@
-# PersonalStyling · 衣品选衣 Skill V2.2
+# PersonalStyling · 衣品选衣 Skill V2.3
 
 **中国大陆主流男性审美 × 少量日韩简约风**。一个安装后直接对话使用的私人形象顾问技能，适配 Codex、WorkBuddy 以及支持 Agent Skills 的 AI Agent。
 
@@ -8,7 +8,7 @@
 
 ## 为什么改成来源优先
 
-上一版本给过度通用的搭配建议时，用户无法判断出处，也很难选出真正喜欢的穿搭。**V2.2 改为先看真实造型、校准喜好，再基于本人照片与生活场景做适配**：
+上一版本给过度通用的搭配建议时，用户无法判断出处，也很难选出真正喜欢的穿搭。**V2.3 改为先看真实造型、校准喜好，再基于本人照片与生活场景做适配**：
 
 - 默认先从真人 OOTD / 中国品牌官方 Lookbook 寻找 4–6 个**可核验原始链接**，有多少可靠案例就展示多少，不凑数。
 - 预置一组**带网址与核验日期**的官方造型/图库种子：[穿搭素材来源目录](.agents/skills/personal-styling/references/lookbook-library.md) 和 [已核实案例索引](.agents/skills/personal-styling/references/curated-look-index.json)。它不是下载好的海量图片库；原图和版权归来源网站。
@@ -18,7 +18,35 @@
 
 可直接说：**“先不要给我买衣服建议。请拿真实国内男装 Lookbook 和素人 OOTD 的原始链接，展示五种不同风格让我挑；选定后再按我照片适配。”**
 
-## V2.2 重点改进
+## 新增：真实案例检索库（2026-11-04）
+
+[浏览结构化案例库](.agents/skills/personal-styling/references/outfit-cases.json) · [查看检索与出处规则](.agents/skills/personal-styling/references/library-search.md)
+
+本轮新增 **19 条有具体出处的记录**，按来源严格分为：
+
+- **8 条**中国博主本人图文中的具体 LOOK（以痴五安 chammy 的独立原帖/LOOK 段落为主）；
+- **3 条**已核实的博主穿搭视频主题（只确认标题，未核实全身细节）；
+- **4 条**中国演员相关的媒体图文/访谈造型解析（包括井柏然和王安宇）；
+- **3 条**优衣库中国 UNIQLO:C 的官方同组造型；
+- **1 条**推荐 43 位男装博主的策展视频入口（不是 43 条已核实案例）。
+
+**19 是检索记录数，不等于 19 张全身照片，也不等于 19 套都能直接复制的完整穿搭。** 某些记录只有上衣或视频主题，未核实的裤鞋留空。来源照片版权归作者，本仓库不收集原图，不会拿个人照片去搜索或公开保存。
+
+同一创作者的不同段落可能共享一个网页链接，但通过 `source_segment` 区分 LOOK1/LOOK2 或作者分节。记录有来源类别、可信程度、已确认的单品、版型、颜色、材质、场景及不能推断的部分。
+
+**使用逻辑**：用户先挑喜欢的上衣/裤型/配色/叠穿，而不是给出一套“通用中国男装”。同一创作者默认最多展示两个案例，尽量让用户看到不同思路。用户自己说偏深肤色，也不意味着只能搭深色。
+
+维护者可使用**标准库 Python 的离线搜索工具**（普通 Skill 安装者不用运行）：
+
+```bash
+python scripts/search_looks.py "格纹 松弛" --min-confidence medium
+python scripts/search_looks.py "针织" --kind creator_outfit
+python scripts/search_looks.py "机能" --min-confidence low --json
+```
+
+它不调用网络、不需要 API Key，不存储用户个人资料。Skill 在没有脚本执行权限时可直接读取 JSON 完成检索。
+
+## V2.3 重点改进
 
 1. **照片证据驱动**：通过「可见线索 → 影响 → 可试穿的修改」给出肩线、衣长、裤脚、鞋型、刘海等具体建议；不猜三围和真实尺码。
 2. **三套有差异**：A 日常高频、B 形象升级、C 清爽年轻；至少在两处造型结构、正式度或鞋裤形态上不同，不只是换颜色。
@@ -82,6 +110,8 @@ PersonalStyling/
 │       ├── photo-analysis.md
 │       ├── lookbook-library.md
 │       ├── curated-look-index.json
+│       ├── outfit-cases.json
+│       ├── library-search.md
 │       ├── style-discovery.md
 │       ├── fit-and-hair.md
 │       ├── outfit-playbook.md
@@ -90,6 +120,7 @@ PersonalStyling/
 │       ├── quality-review.md
 │       ├── capability-and-privacy.md
 │       └── examples.md
+├── scripts/search_looks.py    # 可选：离线检索19条来源案例
 ├── evals/cases.json           # 测试场景与期望行为（不是模型实际评分）
 ├── tests/test_skill.py        # 结构、规范及打包静态校验
 ├── scripts/package_skill.py   # 发布者打包脚本
